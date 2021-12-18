@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+</head>
+<body>
+    <!-- Diyalog etiketi ilk olarak görünmez istersen gösterebilirsin.-->
+
+    <button id = "ac">Giriş Yap</button>
+
+    <dialog>
+        <form action="">
+            <p> <input placeholder="kullanici adi gir"> </p>
+            <p> <input type="password" placeholder="şifre"></p>
+            <p> <button type="submit">Giriş Yap</button> <button id="kapat">Kapat</button></p>
+        </form>
+    </dialog>
+
+    <script>
+        // querySelector gidip bir element 
+        // seçmemize ve daha sonra üzerinde işlem yapmamıza yardımcı olur
+        var dialogIslemleri = document.querySelector("dialog");
+
+        document.querySelector("#ac").onclick = function() {
+            dialogIslemleri.showModal();
+        }
+
+        document.querySelector("#kapat").onclick = function() {
+            dialogIslemleri.close();
+            return false;
+        }
+        
+
+       
+    </script>
+
+</body>
+</html>
